@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lost & Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Splash Screen -->
+<div id="splash">
+  <h1>Lost & Found</h1>
+</div>
+
+<!-- Main UI -->
+<div id="main" class="hidden">
+
+  <div class="container">
+    <div class="left">
+      <h1>Campus Lost & Found</h1>
+      <p>Report and recover lost items easily.</p>
+    </div>
+
+    <div class="glass-card">
+      <h2>Report Lost Item</h2>
+
+      <form action="/lost" method="POST">
+        <input name="itemName" placeholder="Item Name" required>
+        <textarea name="description" placeholder="Description"></textarea>
+        <input name="location" placeholder="Location">
+        <input name="date" type="date">
+        <input name="contact" placeholder="Contact">
+        <button class="submit-btn">Submit</button>
+      </form>
+
+      <a href="/found">Found an Item?</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  setTimeout(() => {
+    document.getElementById("splash").style.display = "none";
+    document.getElementById("main").classList.remove("hidden");
+  }, 2000);
+</script>
+
+</body>
+</html>

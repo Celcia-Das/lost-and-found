@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Found Item</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="left">
+    <h1>Found Something?</h1>
+    <p>Help someone recover their lost item.</p>
+  </div>
+
+  <div class="glass-card">
+    <h2>Report Found Item</h2>
+
+    <form action="/found" method="POST" enctype="multipart/form-data">
+       <input type="text" name="itemName" placeholder="Item Name" required>
+  <input type="text" name="description" placeholder="Description" required>
+  <input type="text" name="location" placeholder="Location" required>
+  <input type="date" name="date" required>
+  <input type="text" name="contact" placeholder="Contact" required>
+
+  <!-- NEW -->
+  <input type="file" name="image" accept="image/*" required>
+
+   <button class="submit-btn">Submit</button>
+</form>
+
+    <a href="/">Back to Lost</a>
+  </div>
+
+</div>
+
+</body>
+</html>
